@@ -28,9 +28,16 @@ while True:
     if opcion == "5":
         print("Saliendo...")
         break
+def pedir_numero(texto):
+    while True:
+        try:
+            return float(input(texto))
+        except ValueError:
+            print("Error: por favor ingresa un número válido.")
 
-    a = float(input("Ingrese el primer número: "))
-    b = float(input("Ingrese el segundo número: "))
+a = pedir_numero("Ingrese el primer número: ")
+b = pedir_numero("Ingrese el segundo número: ")
+
 
     if opcion == "1":
         print("Resultado:", sumar(a, b))
